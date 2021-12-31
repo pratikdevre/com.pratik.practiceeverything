@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "wrap_content"
+    android:gravity = "center_horizontal"
+    android:background="@color/design_default_color_primary_variant"
+    android:orientation = "vertical"
+    android:layout_margin="10dp"
+    android:id="@+id/linearLayout"
+    android:padding = "10dp">
+  <ImageView
+      android:id = "@+id/showcarimage"
+      android:layout_width = "match_parent"
+      android:layout_height = "200dp"
+      android:contentDescription = "add image"
+      android:scaleType = "fitCenter"
+
+      app:srcCompat = "@drawable/ic_baseline_image_search_24"
+
+      tools:ignore = "VectorDrawableCompat" />
+  <TextView
+      android:id = "@+id/showcarname"
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:textSize="25sp"
+      android:gravity="center"
+      android:textColor="@color/white"
+      android:text="pratik"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

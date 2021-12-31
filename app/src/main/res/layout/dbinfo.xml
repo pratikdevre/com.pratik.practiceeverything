@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width = "match_parent"
+    android:layout_height = "wrap_content"
+    android:padding="10dp"
+    android:background="#F3F0F0"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/dbnameshow"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:text="name"
+        android:textSize="25sp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/dbclassshow"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:text="name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        android:padding="5dp"
+
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

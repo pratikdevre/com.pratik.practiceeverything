@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "991317098853",
+    "project_id": "demodb-b1cd8",
+    "storage_bucket": "demodb-b1cd8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991317098853:android:5fa5687f6068536923e18c",
+        "android_client_info": {
+          "package_name": "com.pratik.practiceeverything"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991317098853-v9oet1hs69tj5a57mi1scqfpqvlhem72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtMs6JjZ9bnZCvzKdIBAWfa_3G9wnHsT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991317098853-v9oet1hs69tj5a57mi1scqfpqvlhem72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name = "app_name">Practice Everything</string>
+    <string name = "counterbtn">Counter Screen</string>
+    <string name = "main_name">The Android Developer</string>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android = "http://schemas.android.com/apk/res/android"
+          xmlns:tools = "http://schemas.android.com/tools"
+          package = "com.pratik.practiceeverything">
+
+    <uses-permission android:name = "android.permission.SET_ALARM" />
+    <uses-permission android:name = "android.permission.INTERNET" />
+    <uses-permission android:name = "android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name = "android.permission.WRITE_EXTERNAL_STORAGE"
+                     tools:ignore = "ScopedStorage" />
+    <uses-permission android:name = "android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name = "android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup = "true"
+        android:icon = "@mipmap/ic_launcher"
+        android:label = "@string/app_name"
+        android:roundIcon = "@mipmap/ic_launcher_round"
+        android:supportsRtl = "true"
+        android:theme = "@style/Theme.PracticeEverything">
+        <activity
+            android:name = ".UsingFireStore"
+            android:exported = "true" />
+        <activity
+            android:name = ".CarInfo"
+            android:exported = "true" />
+        <activity
+            android:name = ".NewCarCreate"
+            android:exported = "true" />
+        <activity
+            android:name = ".MainActivityCarProject"
+            android:exported = "true" />
+        <activity
+            android:name = ".DbInfo"
+            android:exported = "true" />
+        <activity
+            android:name = ".DatabaseList"
+            android:exported = "true" />
+        <activity
+            android:name = ".NextPage"
+            android:exported = "true" />
+        <activity
+            android:name = ".DataBaseConnectionPage"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".NotificationSendingPage"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".SwitchOnOff"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".WithMenu"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".AlarmAndTimer"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity">
+            <intent-filter>
+                <action android:name = "android.intent.action.SET_ALARM" />
+
+                <category android:name = "android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name = ".OpenCamera"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".SendEmailUI"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".ListViewScreen"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".SnapChatUI"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".ReceiveDataFromOne"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity"
+            tools:ignore = "Instantiatable" />
+        <activity
+            android:name = ".SendDataToOther"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".Form"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".CounterScreen"
+            android:exported = "true"
+            android:parentActivityName = ".MainActivity" />
+        <activity
+            android:name = ".SplashScreen"
+            android:exported = "true">
+            <intent-filter>
+                <action android:name = "android.intent.action.MAIN" />
+
+                <category android:name = "android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name = ".MainActivity"
+            android:exported = "true" />
+
+        <meta-data
+            android:name = "preloaded_fonts"
+            android:resource = "@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:padding = "20dp"
+    tools:context = ".DbInfo">
+
+  <TextView
+      android:id = "@+id/shownamedb"
+      android:layout_width = "0dp"
+      android:layout_height = "wrap_content"
+      android:gravity = "center_horizontal"
+      android:text = "TextView"
+      android:textSize = "20sp"
+      app:layout_constraintBottom_toBottomOf = "parent"
+      app:layout_constraintEnd_toEndOf = "parent"
+      app:layout_constraintHorizontal_bias = "0.6"
+      app:layout_constraintStart_toStartOf = "parent"
+      app:layout_constraintTop_toTopOf = "parent"
+      app:layout_constraintVertical_bias = "0.022" />
+  <TextView
+      android:id = "@+id/showclassdb"
+      android:layout_width = "0dp"
+      android:layout_height = "wrap_content"
+      android:gravity = "center_horizontal"
+      android:text = "TextView"
+      android:textSize = "20sp"
+      app:layout_constraintBottom_toBottomOf = "parent"
+      app:layout_constraintEnd_toEndOf = "parent"
+      app:layout_constraintHorizontal_bias = "0.4"
+      app:layout_constraintStart_toStartOf = "parent"
+      app:layout_constraintTop_toBottomOf = "@+id/shownamedb"
+      app:layout_constraintVertical_bias = "0.010" />
+  <EditText
+      android:id = "@+id/surnamedb"
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:hint = "enter the surname"
+      app:layout_constraintBottom_toBottomOf = "parent"
+      app:layout_constraintEnd_toEndOf = "parent"
+      app:layout_constraintHorizontal_bias = "0.4"
+      app:layout_constraintStart_toStartOf = "parent"
+      app:layout_constraintTop_toBottomOf = "@+id/showclassdb"
+      app:layout_constraintVertical_bias = "0.010" />
+  <EditText
+      android:id = "@+id/agedb"
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:hint = "enter the age"
+      app:layout_constraintBottom_toBottomOf = "parent"
+      app:layout_constraintEnd_toEndOf = "parent"
+      app:layout_constraintHorizontal_bias = "0.4"
+      app:layout_constraintStart_toStartOf = "parent"
+      app:layout_constraintTop_toBottomOf = "@+id/surnamedb"
+      app:layout_constraintVertical_bias = "0.010" />
+  <Button
+      android:id = "@+id/button3"
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:layout_marginTop = "28dp"
+      android:onClick = "addtoDB"
+      android:text = "Submit"
+      app:layout_constraintBottom_toBottomOf = "parent"
+      app:layout_constraintEnd_toEndOf = "parent"
+      app:layout_constraintHorizontal_bias = "0.6"
+      app:layout_constraintStart_toStartOf = "parent"
+      app:layout_constraintTop_toBottomOf = "@+id/agedb"
+      app:layout_constraintVertical_bias = "0.0"
+      tools:ignore = "OnClick,UsingOnClickInXml" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context = ".DatabaseList">
+  <EditText
+      android:id="@+id/dbname"
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:hint="Enter Name"
+      android:minHeight="48dp"
+      android:maxHeight="48dp"
+      />
+  <EditText
+      android:id="@+id/dbclass"
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:hint="Enter Class"
+      android:minHeight="48dp"
+      android:maxHeight="48dp"
+      />
+  <Button
+      android:id="@+id/dbbtn"
+      android:layout_width = "match_parent"
+      android:layout_height = "wrap_content"
+      android:text="Submit"
+      android:onClick="addToDB"
+      tools:ignore = "UsingOnClickInXml" />
+  <ProgressBar
+      android:id = "@+id/progressBar"
+      style = "?android:attr/progressBarStyle"
+      android:layout_width = "wrap_content"
+      android:visibility="gone"
+      android:layout_height = "wrap_content" />
+
+  <ListView
+      android:layout_width = "match_parent"
+      android:layout_height = "match_parent"
+      android:id="@+id/dblistview"/>
+
+  </androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    tools:context = ".SendDataToOther">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width = "match_parent"
+    android:layout_height = "wrap_content">
+    <EditText
+        android:id = "@+id/name"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:hint = "Enter your name"
+        android:minHeight = "48dp"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toTopOf = "parent" />
+    <EditText
+        android:id = "@+id/number"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:hint = "Enter your Mobile number"
+        android:minHeight = "48dp"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/name" />
+
+    <Button
+        android:id = "@+id/submit"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:text = "Submit"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintHorizontal_bias = "0.498"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/number" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id = "@+id/guideline1"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:orientation = "vertical"
+        app:layout_constraintGuide_begin = "20dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id = "@+id/guideline2"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:orientation = "vertical"
+        app:layout_constraintGuide_end = "20dp" />
+
+    <TextView
+        android:id = "@+id/textView3"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:text = "Call : +91 9860232056"
+        android:textSize = "24sp"
+        android:textStyle = "bold"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/submit" />
+
+    <Button
+        android:id = "@+id/call"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:text = "call"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/textView3" />
+
+    <TextView
+        android:id = "@+id/textView4"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:text = "Open : https://www.amazon.com"
+        android:textSize = "24sp"
+        android:textStyle = "bold"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/call" />
+
+    <Button
+        android:id = "@+id/website"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:text = "Open"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/textView4" />
+
+    <EditText
+        android:id = "@+id/sharestr"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:hint = "Enter a text and then share"
+        android:minHeight = "48dp"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/website" />
+    <Button
+        android:id = "@+id/sharebtn"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:text = "share"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/sharestr" />
+
+    <EditText
+        android:id = "@+id/whatsapptext"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:hint = "Enter a text and direct share to whatsapp"
+        android:minHeight = "48dp"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/sharebtn" />
+    <Button
+        android:id = "@+id/whatsappbtn"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "16dp"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginTop = "16dp"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp"
+        android:text = "share to whatsapp"
+        app:layout_constraintEnd_toStartOf = "@+id/guideline2"
+        app:layout_constraintStart_toStartOf = "@+id/guideline1"
+        app:layout_constraintTop_toBottomOf = "@+id/whatsapptext" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
