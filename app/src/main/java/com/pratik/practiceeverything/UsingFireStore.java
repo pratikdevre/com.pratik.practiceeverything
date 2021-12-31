@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +16,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
@@ -58,19 +62,87 @@ public class UsingFireStore extends AppCompatActivity {
         rcvfetchedfs.setAdapter(adapter);
     }
 
+
+
+//      Toast.makeText(this, "fetching", Toast.LENGTH_SHORT).show();
+//        fbfs.collection("Person Data").document("DdjY4bm8jJn0BVyeRBL9").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//        @Override
+//        public void onSuccess(DocumentSnapshot documentSnapshot) {
+//
+//            Log.d("TAGsc","success "+documentSnapshot.exists());
+////                Log.d("TAGsc","email : "+documentSnapshot.getString("Email"));
+////                Log.d("TAGsc","Name : "+documentSnapshot.getString("Name"));
+//
+//        }
+//    }).addOnFailureListener(new OnFailureListener() {
+//        @Override
+//        public void onFailure(@NonNull Exception e) {
+//            Log.d("TAGsc","fail ");
+//        }
+//    });
     private void fetchData() {
-        Toast.makeText(this, "fetching", Toast.LENGTH_SHORT).show();
-        fbfs.collection("Person Data").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-            @SuppressLint("NotifyDataSetChanged")
-            @Override
-            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                List<DocumentSnapshot> list2 = queryDocumentSnapshots.getDocuments();
-                for (DocumentSnapshot q : list2) {
-                    list.add(q.toObject(DataModel.class));
-                }
-                adapter.notifyDataSetChanged();
-            }
-        }).addOnFailureListener(e -> Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show());
+        fbfs.collection("Person Data")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d("jbj", "doc id > "+document.getId() + " => " + document.getData());
+
+
+                            }
+                        } else {
+                            Log.d("jbj", "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+
+//        fbfs.collection("Person Data").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//            @SuppressLint("NotifyDataSetChanged")
+//            @Override
+//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//
+//
+//                List<DocumentSnapshot> list2 = queryDocumentSnapshots.getDocuments();
+//                for (DocumentSnapshot q : list2) {
+//
+//                    Log.d("dvdv",""+q.toObject(DataModel.class).email);
+//                    list.add(q.toObject(DataModel.class));
+//                    Log.d("TAGsc","success email : "+list.get(0).email);
+//
+//                }
+//
+//                adapter.notifyDataSetChanged();
+//
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                Log.d("TAGsc","failure "+e.getMessage());
+//                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        fbfs.collection("Person Data").document("DdjY4bm8jJn0BVyeRBL9").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//            @SuppressLint("NotifyDataSetChanged")
+//            @Override
+//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                Log.d("TAGsc","success ");
+//                List<DocumentSnapshot> list2 =queryDocumentSnapshots.getDocuments();
+//                Log.d("TAGsc","success "+list);
+////                List<DocumentSnapshot> list2 = queryDocumentSnapshots.getDocuments();
+////                for (DocumentSnapshot q : list2) {
+////                    list.add(q.toObject(DataModel.class));
+////                }
+//                adapter.notifyDataSetChanged();
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                Log.d("TAGsc","failure "+e.getMessage());
+//                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
     private void insertData() {
@@ -102,6 +174,11 @@ public class UsingFireStore extends AppCompatActivity {
         public void onBindViewHolder(@NonNull MyViewHolderfs holder, int position) {
             holder.nametextviewfs.setText(dataList.get(position).getName());
             holder.emailtextviewfs.setText(dataList.get(position).getEmail());
+            Log.d("dfvflmv","position>"+position);
+            Log.d("dfvflmv","getName"+dataList.get(position).getName());
+            Log.d("dfvflmv","getEmail"+dataList.get(position).getEmail());
+            Log.d("dfvflmv","........................");
+
         }
 
         @Override
@@ -121,7 +198,8 @@ public class UsingFireStore extends AppCompatActivity {
     }
 
     public static class DataModel {
-        String name, email;
+        String name;
+        String email;
 
         public DataModel() {
         }
