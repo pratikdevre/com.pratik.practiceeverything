@@ -7,7 +7,7 @@
     android:layout_height = "match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context = ".UsingFireStore">
+    tools:context = ".UsingFirestoreProject.UsingFireStore">
 
   <EditText
       android:layout_width = "match_parent"
@@ -30,18 +30,12 @@
       android:id="@+id/addbtnfs"
       android:layout_marginTop="5dp"
       />
-  <Button
-      android:layout_width = "match_parent"
-      android:layout_height = "wrap_content"
-      android:text="Fetch"
-      android:id="@+id/fetchbtnfs"
-      android:layout_marginTop="5dp"
-      />
 
   <androidx.recyclerview.widget.RecyclerView
       android:layout_width = "match_parent"
       android:layout_height = "match_parent"
       android:id="@+id/rcvfetchedfs"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
       />
 
   </androidx.appcompat.widget.LinearLayoutCompat>

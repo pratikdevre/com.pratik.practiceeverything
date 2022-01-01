@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "991317098853",
+    "firebase_url": "https://demodb-b1cd8-default-rtdb.firebaseio.com",
     "project_id": "demodb-b1cd8",
     "storage_bucket": "demodb-b1cd8.appspot.com"
   },
@@ -13,6 +14,22 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "991317098853-0nogj1uhgr035trdo8i5e4mkc09msg67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pratik.practiceeverything",
+            "certificate_hash": "926e3567644bffb5e24697757df67e7beb27841e"
+          }
+        },
+        {
+          "client_id": "991317098853-aqa8oilfa8841qfk9f45blmh311s5p37.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pratik.practiceeverything",
+            "certificate_hash": "65f3305b0cde23e36d44115d760af7a154d9180e"
+          }
+        },
         {
           "client_id": "991317098853-v9oet1hs69tj5a57mi1scqfpqvlhem72.apps.googleusercontent.com",
           "client_type": 3

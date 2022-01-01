@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.firestoreroject).setOnClickListener(v -> {
             Toast.makeText(getApplicationContext(), "Opening Firestore Project...", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this, UsingFireStore.class));
+            startActivity(new Intent(MainActivity.this, com.pratik.practiceeverything.UsingFirestoreProject.UsingFireStore.class));
         });
     }
 
